@@ -2,6 +2,10 @@ package agnes
 
 import ("fmt")
 
-func Saytest() {
+func generateTest() {
 	fmt.Println("Hello Test")
+}
+
+func Saytest() {
+	generateTest()
 }
