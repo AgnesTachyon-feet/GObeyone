@@ -6,7 +6,7 @@ import (
 )
 
 func SayHelloAgnes() {
-	fmt.Println("Hello Agnes")
-	generateTest()
+	fmt.Println("Uma musume")
+	//generateTest()
 	tachyon.SayHelloTachyon()
 }
