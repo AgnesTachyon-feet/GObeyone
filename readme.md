@@ -1,4 +1,4 @@
-# GoAPI Essential
+# GoAPI Essential (original by mikelopster)
 
 ### tech stack
 
