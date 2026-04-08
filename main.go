@@ -7,11 +7,8 @@ import (
 )
 
 func main() {
-	fullname := "Agnes Tachyon"
-	var age int = 11
-	agnes.SayHelloAgnes()
-	fmt.Printf("Welcome to the world of feet %s Yay! age: %d\n", fullname, age)
-	fullname = "Manhattan" + " Cafe"
-	age = age * 2
-	fmt.Println(fullname, age)
+	fmt.Print("Yoo!\n")
+	agnes.Agnesforloop()
+	agnes.AgnesDowhile()
+	agnes.AgnesWhile()
 }
