@@ -8,7 +8,6 @@ import (
 
 func main() {
 	fmt.Print("Yoo!\n")
-	agnes.Agnesforloop()
-	agnes.AgnesDowhile()
-	agnes.AgnesWhile()
+	agnes.Agnesmap()
+	agnes.Agnesloopmap()
 }

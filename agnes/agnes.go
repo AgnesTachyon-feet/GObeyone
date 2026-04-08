@@ -41,3 +41,28 @@ func AgnesWhile() {
 	}
 	fmt.Println(myslice)
 }
+
+func Agnesmap() {
+	myMap := make(map[string]int)
+	myMap["apple"] = 6
+	myMap["banana"] = 7
+	fmt.Println("Apple:", myMap["apple"])
+}
+
+func Agnesloopmap() {
+	myMap := make(map[string]int)
+	myMap["apple"] = 6
+	myMap["banana"] = 7
+	myMap["orange"] = 8
+	fmt.Println("Orange:", myMap["orange"])
+	delete(myMap, "orange")
+	for key, value := range myMap {
+		fmt.Printf("%s -> %d\n", key, value)
+	}
+	val, ok := myMap["pear"]
+	if ok {
+		fmt.Println("Pear's value:", val)
+	} else {
+		fmt.Println("Pear not found in map")
+	}
+}
