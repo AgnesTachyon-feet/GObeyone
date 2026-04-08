@@ -69,4 +69,6 @@ func Agnesloopmap() {
 
 func NewUma() {
 	tachyon.Newuma()
+	tachyon.NewUmaArrey()
+	tachyon.NewUmaMap()
 }
