@@ -2,6 +2,7 @@ package tachyon
 
 import (
 	"fmt"
+	"reflect"
 )
 
 func SayHelloTachyon() {
@@ -13,6 +14,7 @@ type Uma struct {
 	Weight int
 	Height int
 	Race   string
+	Racing Racing
 }
 
 func Newuma() {
@@ -21,6 +23,12 @@ func Newuma() {
 		Weight: 55,
 		Height: 165,
 		Race:   "Long",
+		Racing: Racing{
+			Name:       "Tokyo Racecourse",
+			Distance:   2000,
+			RaceType:   "G1",
+			GroundType: "Turf",
+		},
 	}
 	fmt.Printf("Uma: %+v\n", uma1)
 }
@@ -31,20 +39,51 @@ func NewUmaArrey() {
 		Name:   "Agnes Tachyon",
 		Weight: 55,
 		Height: 165,
-		Race:   "Long"}
+		Race:   "Long",
+		Racing: Racing{
+			Name:       "Tokyo Racecourse",
+			Distance:   2000,
+			RaceType:   "G1",
+			GroundType: "Turf",
+		},
+	}
 	uma[1] = Uma{
 		Name:   "Manhattan Cafe",
 		Weight: 50,
 		Height: 160,
-		Race:   "Medium"}
+		Race:   "Medium",
+		Racing: Racing{
+			Name:       "Osaka Racecourse",
+			Distance:   1600,
+			RaceType:   "G2",
+			GroundType: "Turf",
+		},
+	}
 	uma[2] = Uma{
 		Name:   "Gold Ship",
 		Weight: 60,
 		Height: 170,
-		Race:   "Long"}
-	fmt.Println("Uma List:")
-	for _, v := range uma {
-		fmt.Printf("%+v\n", v)
+		Race:   "Long",
+		Racing: Racing{
+			Name:       "Kyoto Racecourse",
+			Distance:   2400,
+			RaceType:   "G3",
+			GroundType: "Turf",
+		},
+	}
+	for i := 0; i < len(uma); i++ {
+		fmt.Println("Uma", (i + 1))
+		fmt.Println("Name: ", uma[i].Name)
+		fmt.Println("Weight: ", uma[i].Weight)
+		fmt.Println("Height: ", uma[i].Height)
+		fmt.Println("Race: ", uma[i].Race)
+		v := reflect.ValueOf(uma[i].Racing)
+		typeOfS := v.Type()
+
+		for i := 0; i < v.NumField(); i++ {
+			fmt.Printf("%s: %v\n", typeOfS.Field(i).Name, v.Field(i).Interface())
+		}
+		fmt.Println("--------------------")
 	}
 }
 
@@ -53,20 +92,52 @@ func NewUmaMap() {
 	uma["u1"] = Uma{
 		Name:   "Agnes Tachyon",
 		Weight: 55,
-		Height: 165}
+		Height: 165,
+		Race:   "Long",
+		Racing: Racing{
+			Name:       "Tokyo Racecourse",
+			Distance:   2000,
+			RaceType:   "G1",
+			GroundType: "Turf",
+		},
+	}
 	uma["u2"] = Uma{
 		Name:   "Manhattan Cafe",
 		Weight: 50,
 		Height: 160,
-		Race:   "Medium"}
+		Race:   "Medium",
+		Racing: Racing{
+			Name:       "Osaka Racecourse",
+			Distance:   1600,
+			RaceType:   "G2",
+			GroundType: "Turf",
+		},
+	}
 	uma["u3"] = Uma{
 		Name:   "Gold Ship",
 		Weight: 60,
 		Height: 170,
-		Race:   "Long"}
-	fmt.Println("Uma Map:")
-	for key, value := range uma {
-		fmt.Printf("%s: %+v\n", key, value)
+		Race:   "Long",
+		Racing: Racing{
+			Name:       "Kyoto Racecourse",
+			Distance:   2400,
+			RaceType:   "G3",
+			GroundType: "Turf",
+		},
 	}
-	fmt.Println("uma u1:", uma["u1"])
+	fmt.Println("--- Uma with Map ---")
+	for key, v := range uma {
+		fmt.Printf("ID: %s\n", key)
+		fmt.Printf("  Name: %s\n", v.Name)
+		fmt.Printf("  Weight: %d kg\n", v.Weight)
+		fmt.Printf("  Racing at: %s (%d m)\n", v.Racing.Name, v.Racing.Distance)
+		fmt.Println("--------------------")
+	}
+}
+
+type Racing struct {
+	Name       string
+	Distance   int
+	RaceType   string
+	GroundType string
 }

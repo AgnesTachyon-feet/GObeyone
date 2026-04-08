@@ -8,7 +8,5 @@ import (
 
 func main() {
 	fmt.Print("Yoo!\n")
-	agnes.Agnesmap()
-	agnes.Agnesloopmap()
 	agnes.NewUma()
 }
