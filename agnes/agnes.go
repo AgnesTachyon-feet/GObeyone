@@ -66,3 +66,7 @@ func Agnesloopmap() {
 		fmt.Println("Pear not found in map")
 	}
 }
+
+func NewUma() {
+	tachyon.Newuma()
+}

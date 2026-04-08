@@ -1,6 +1,8 @@
 package agnes
 
-import ("fmt")
+import (
+	"fmt"
+)
 
 func generateTest() {
 	fmt.Println("Hello Test")
