@@ -83,4 +83,5 @@ func Pp() {
 	tachyon.CallRectangle()
 	tachyon.MakeSound()
 	tachyon.PointerAgnes()
+	tachyon.CallchangeValue()
 }

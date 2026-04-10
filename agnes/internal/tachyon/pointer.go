@@ -13,3 +13,13 @@ func PointerAgnes() {
 	fmt.Println("New value of x: ", x)
 
 }
+
+func changeValue(ptr *int) {
+	*ptr = 50
+}
+
+func CallchangeValue() {
+	x := 20
+	changeValue(&x)
+	fmt.Println("Value of x after changeValue: ", x)
+}
