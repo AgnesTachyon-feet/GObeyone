@@ -8,5 +8,6 @@ import (
 
 func main() {
 	fmt.Print("Yoo!\n")
-	agnes.NewUma()
+	//agnes.NewUma()
+	agnes.Pp()
 }

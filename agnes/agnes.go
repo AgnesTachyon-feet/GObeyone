@@ -73,3 +73,7 @@ func NewUma() {
 	tachyon.NewUmaArrey()
 	tachyon.NewUmaMap()
 }
+
+func Pp() {
+	tachyon.SayFunk("Agnes")
+}
