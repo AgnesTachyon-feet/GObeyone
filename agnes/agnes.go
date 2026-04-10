@@ -80,4 +80,5 @@ func Pp() {
 	tachyon.SayFunk("Manhattan")
 	tachyon.AddSum()
 	tachyon.CallStudent()
+	tachyon.CallRectangle()
 }
