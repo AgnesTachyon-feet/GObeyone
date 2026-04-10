@@ -2,6 +2,7 @@ package agnes
 
 import (
 	"fmt"
+
 	"github.com/AgnesTachyon/Gobeyone/agnes/internal/tachyon"
 )
 
@@ -76,4 +77,6 @@ func NewUma() {
 
 func Pp() {
 	tachyon.SayFunk("Agnes")
+	tachyon.SayFunk("Manhattan")
+	tachyon.AddSum()
 }
