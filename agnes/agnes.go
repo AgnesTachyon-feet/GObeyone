@@ -81,4 +81,5 @@ func Pp() {
 	tachyon.AddSum()
 	tachyon.CallStudent()
 	tachyon.CallRectangle()
+	tachyon.MakeSound()
 }

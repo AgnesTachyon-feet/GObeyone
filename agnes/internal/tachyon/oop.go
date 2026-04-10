@@ -39,3 +39,36 @@ func CallRectangle() {
 	area := rect.Area()
 	fmt.Println("Area of rectangle: ", area)
 }
+
+// polymorphism
+
+type Speaker interface {
+	Speak() string
+}
+type Dog struct {
+	Name string
+}
+
+func (d Dog) Speak() string {
+	return "Woof!"
+}
+
+type Person struct {
+	Name string
+}
+
+func (p Person) Speak() string {
+	return "Hello!"
+}
+
+func makeSound(s Speaker) {
+	fmt.Println(s.Speak())
+}
+
+func MakeSound() {
+	dog := Dog{Name: "Denji"}
+	person := Person{Name: "Makima"}
+
+	makeSound(dog)
+	makeSound(person)
+}
