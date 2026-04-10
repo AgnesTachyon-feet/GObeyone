@@ -79,4 +79,5 @@ func Pp() {
 	tachyon.SayFunk("Agnes")
 	tachyon.SayFunk("Manhattan")
 	tachyon.AddSum()
+	tachyon.CallStudent()
 }
