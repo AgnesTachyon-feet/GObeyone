@@ -23,3 +23,17 @@ func CallchangeValue() {
 	changeValue(&x)
 	fmt.Println("Value of x after changeValue: ", x)
 }
+
+type Mama struct {
+	Name string
+}
+
+func changeName(p Mama) {
+	p.Name = "Glock"
+}
+
+func ChangePersonName() {
+	person := Mama{Name: "Agnes"}
+	changeName(person)
+	fmt.Println(person.Name)
+}
