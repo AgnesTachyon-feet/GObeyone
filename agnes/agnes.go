@@ -84,4 +84,5 @@ func Pp() {
 	tachyon.MakeSound()
 	tachyon.PointerAgnes()
 	tachyon.CallchangeValue()
+	tachyon.ChangePersonName()
 }

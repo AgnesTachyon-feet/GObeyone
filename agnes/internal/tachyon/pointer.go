@@ -28,12 +28,12 @@ type Mama struct {
 	Name string
 }
 
-func changeName(p Mama) {
+func changeName(p *Mama) {
 	p.Name = "Glock"
 }
 
 func ChangePersonName() {
 	person := Mama{Name: "Agnes"}
-	changeName(person)
+	changeName(&person)
 	fmt.Println(person.Name)
 }
