@@ -85,4 +85,5 @@ func Pp() {
 	tachyon.PointerAgnes()
 	tachyon.CallchangeValue()
 	tachyon.ChangePersonName()
+	tachyon.CallRaise()
 }

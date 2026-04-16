@@ -37,3 +37,21 @@ func ChangePersonName() {
 	changeName(&person)
 	fmt.Println(person.Name)
 }
+
+type Employee struct {
+	Name   string
+	Salary int
+}
+
+func giveRaise(e *Employee, raise int) {
+	e.Salary += raise
+}
+
+func CallRaise() {
+	emp := Employee{
+		Name:   "Agnes Tachyon",
+		Salary: 444,
+	}
+	giveRaise(&emp, 100)
+	fmt.Printf("Employee: %s, Salary: %d\n", emp.Name, emp.Salary)
+}
