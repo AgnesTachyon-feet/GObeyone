@@ -86,4 +86,6 @@ func Pp() {
 	tachyon.CallchangeValue()
 	tachyon.ChangePersonName()
 	tachyon.CallRaise()
+	tachyon.CallPrepend()
+	tachyon.CallUpdateConfig()
 }

@@ -55,3 +55,49 @@ func CallRaise() {
 	giveRaise(&emp, 100)
 	fmt.Printf("Employee: %s, Salary: %d\n", emp.Name, emp.Salary)
 }
+
+type ListNode struct {
+	Value int
+	Next  *ListNode
+}
+
+func prepend(head **ListNode, value int) {
+	newNode := ListNode{Value: value}
+	*head = &newNode
+}
+
+func CallPrepend() {
+	var head *ListNode
+	prepend(&head, 10)
+	prepend(&head, 20)
+
+	current := head
+	for current != nil {
+		fmt.Println(current.Value)
+		current = current.Next
+	}
+}
+
+type Config struct {
+	LogLevel string
+	Port     int
+}
+
+func UpdateConfig(c *Config, logLevel string, port int) {
+	c.LogLevel = logLevel
+	c.Port = port
+}
+
+func CallUpdateConfig() {
+	// Initial configuration
+	appConfig := &Config{
+		LogLevel: "info",
+		Port:     8080,
+	}
+
+	fmt.Println("Initial Config:", appConfig)
+
+	// Update configuration
+	UpdateConfig(appConfig, "debug", 9000)
+	fmt.Println("Updated Config:", appConfig)
+}
